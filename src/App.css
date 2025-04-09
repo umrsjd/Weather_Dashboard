@@ -1,31 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600&display=swap');
 
-body{
-    background-color: aliceblue;
+body {
+    background-color: #6f5c84;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 50px;
-    font-family:'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-.app{
+.app {
     width: 400px;
     padding: 25px;
     color: #e5e5e5;
     border-radius: 10px;
-    box-shadow: 4px 4px 15px 0px rgba(0,0,0,0.2);
-    background: linear-gradient(108deg,#821ea9,#7c43e0);
+    box-shadow: 4px 4px 15px 0px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(108deg, #821ea9, #7c43e0);
 }
-.app h1{
+
+.app h1 {
     text-align: center;
     font-size: 24px;
     font-weight: 400;
 }
-.input-wrapper{
+
+.input-wrapper {
     display: flex;
 }
-.input-wrapper input{
+
+.input-wrapper input {
     width: 100%;
     padding: 5px 10px;
     height: 30px;
@@ -34,10 +37,12 @@ body{
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-.input-wrapper input:focus{
+
+.input-wrapper input:focus {
     outline: none;
 }
-.input-wrapper button{
+
+.input-wrapper button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,62 +54,208 @@ body{
     cursor: pointer;
     width: 80px;
 }
-.content{
+
+.content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(262deg,rgba(0,0,0,0.1),rgba(0,0,0,0.4)) ;
+    background: linear-gradient(262deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4));
     margin-top: 10px;
     border-radius: 10px;
 }
-.d-flex{
+
+.d-flex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.flex-c{
+
+.flex-c {
     flex-direction: column;
 }
-.location{margin-top: 20px;}
-.location h2{
+
+.location {
+    margin-top: 20px;
+}
+
+.location h2 {
     margin: 0;
     margin-left: 10px;
     font-weight: 300;
 }
-.location h2 span{
+
+.location h2 span {
     font-size: 14px;
 }
-.datetext{
+
+.datetext {
     font-size: 14px;
 }
-.weatherdesc h3{
+
+.weatherdesc h3 {
     margin: 0;
     text-transform: capitalize;
     font-weight: 400;
 }
-.tempstats{
+
+.tempstats {
     width: 100%;
     padding: 20px 0px;
 }
-.tempstats h1{
+
+.tempstats h1 {
     font-size: 64px;
     font-weight: 200;
     margin: 0;
 }
-.tempstats h1 span{
+
+.tempstats h1 span {
     font-size: 38px;
 }
-.tempstats h3{
+
+.tempstats h3 {
     font-weight: 400;
 }
-.windstats{
+
+.windstats {
     padding: 0px 20px;
-    background:rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
     border-radius: 10px;
 }
-.windstats h3{
+
+.windstats h3 {
     margin-left: 10px;
     font-weight: 400;
+}
+
+.app.light {
+    background: linear-gradient(108deg, #f0f0f0, #d7eaff);
+    color: #333;
+}
+
+.app.dark {
+    background: linear-gradient(108deg, #2b1055, #41295a);
+    color: #faf4f4;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.options-bar {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.recent-searches {
+    margin-top: 10px;
+}
+
+.recent-searches ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.recent-searches li {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.forecast {
+    margin-top: 20px;
+}
+
+.forecast h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.forecast-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    padding: 15px 10px;
+    border-radius: 12px;
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+    max-width: 120px;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.forecast-card p {
+    margin: 8px 0 4px;
+    font-size: 14px;
+}
+
+.forecast-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
+    max-height: 120px;
+    overflow-y: auto;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: calc(100% - 80px); 
+    z-index: 10;
+}
+
+.suggestions-list li {
+    padding: 8px 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.suggestions-list li:hover {
+    background: #ddd;
+}
+
+.app.dark .input-wrapper input {
+    background-color: #fff;
+    color: #000;
+}
+
+.app.dark .input-wrapper input::placeholder {
+    color: #888;
+}
+
+.app.dark .suggestions-list {
+    background-color: #fff;
+    color: #000;
 }
